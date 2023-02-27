@@ -54,6 +54,7 @@ const Signup = () => {
         await addDoc(colref, {
           user_name: username,
           user_id: cred.user.uid,
+          user_bio: bio,
         }).then(() => {
 
           //set the inputs back to empty fields after the form has been submitted  

@@ -33,7 +33,6 @@ const Login = () => {
             isClosable: true,
             variant: 'left-accent',
             position: 'top-right',
-
           });
           setEmail('');
           setPassword('');
