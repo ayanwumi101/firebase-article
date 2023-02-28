@@ -3,7 +3,7 @@ import { Box, FormControl, FormLabel, Button, Heading, Text, VStack, Input, useT
 import { LoginCurve } from 'iconsax-react'
 import { app } from '../../firebaseConfig'
 import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -84,6 +84,7 @@ const Login = () => {
               <Box>
                 <Button type='submit' w='400px' colorScheme='teal' onClick={handleClick}>Login <LoginCurve style={{ marginLeft: '5px' }} /></Button>
               </Box>
+              <Text>Don't have an account? <Link to='/signup' style={{color: '#4ae'}}>Signup</Link></Text>
             </VStack>
           </FormControl>
         </Box>

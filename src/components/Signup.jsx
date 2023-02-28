@@ -5,7 +5,7 @@ import {Box, FormControl, FormLabel, Button, Heading, Text, VStack, Input, useTo
 import {getAuth, createUserWithEmailAndPassword, signOut} from 'firebase/auth'
 import {addDoc, getFirestore, collection} from 'firebase/firestore'
 import {getStorage, ref, uploadBytes, } from 'firebase/storage'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
 const Signup = () => {
@@ -108,6 +108,7 @@ const Signup = () => {
   }
 
   return (
+    <>
     <Box mt='4'>
       <VStack spacing={6}>
 
@@ -146,9 +147,11 @@ const Signup = () => {
           </Box>
         </VStack>
       </FormControl>
+          <Text textAlign='center' mt='3'>Already have an account? <Link to='/login' style={{ color: '#4ae' }}>Login</Link></Text>
       </Box>
       </VStack>
     </Box>
+    </>
   )
 }
 
